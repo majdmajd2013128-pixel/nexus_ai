@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My AI</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="auth" class="screen">
+  <div class="card">
+    <h1>My AI</h1><p>مساعدك الذكي الخاص</p>
+    <input id="username" placeholder="اسم المستخدم">
+    <input id="password" type="password" placeholder="كلمة المرور">
+    <div class="row"><button onclick="login()">دخول</button><button class="ghost" onclick="register()">إنشاء حساب</button></div>
+    <div id="authMsg"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <aside>
+    <h2>My AI</h2>
+    <button onclick="showTab('chat')">💬 الدردشة</button>
+    <button onclick="showTab('image')">🎨 توليد الصور</button>
+    <button onclick="logout()">🚪 تسجيل الخروج</button>
+  </aside>
+  <main>
+    <section id="chatTab">
+      <div class="top"><span id="who"></span></div>
+      <div id="messages"></div>
+      <div class="composer"><textarea id="msg" placeholder="اكتب رسالتك..."></textarea><button onclick="sendChat()">إرسال</button></div>
+    </section>
+    <section id="imageTab" class="hidden">
+      <h2>توليد الصور</h2>
+      <textarea id="prompt" placeholder="صف الصورة التي تريدها..."></textarea>
+      <input id="neg" placeholder="Negative prompt (اختياري)">
+      <button onclick="generateImage()">توليد</button>
+      <div id="imageResult"></div>
+    </section>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body></html>
