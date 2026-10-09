@@ -1,0 +1,6 @@
+NEXUS AI restored files.
+- Put the templates folder beside app.py.
+- requirements.txt lists Python packages for Flask.
+- index.html is a static GitHub Pages landing page only.
+- GitHub Pages cannot run app.py, Flask, llama-cli, or the local Qwen model. The interactive app requires a Python-capable server and the model at models/Qwen3-0.6B-Q4_0.gguf.
+- Before public deployment, change the hardcoded admin password and use a strong NEXUS_SECRET_KEY environment variable. Never use the example credentials on a public server.
